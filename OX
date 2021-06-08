@@ -1,0 +1,10 @@
+ox.obj: 	ox.asm
+    masm ox,,ox/ml;
+
+ox.exe: 	ox.obj
+    link ox,,ox/map/linenumbers/noignorecase;
+
+ox.bin: 	ox.exe
+    exe2bin ox ox.sys
+
+
